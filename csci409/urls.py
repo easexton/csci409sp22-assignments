@@ -23,8 +23,8 @@ import tickets.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('airports/', include('airports.urls')),
-    path('flights/', include('flights.urls')),
-    path('routes/', include('routes.urls')),
-    path('tickets/', include('tickets.urls')),
+    path('airports', include('airports.urls')),
+    path('flights', include('flights.urls')),
+    path('routes', include('routes.urls')),
+    path('tickets', include('tickets.urls')),
 ]
