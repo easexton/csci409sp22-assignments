@@ -1,0 +1,24 @@
+<!-- Specify which template to extend -->
+{% extends 'base.html' %}
+
+<!-- Add content to the content block in the main template -->
+{% block content %}
+<h1>Displaying flights from {{ flight.origin.airport_code }} to {{ flight.destination.airport_code }}</h1>
+
+<table class="table">
+    <tr>
+        <td><strong>Airline</strong></td>
+        <td>{{ flight.airline.airline_name }}</td>
+    </tr>
+    <tr>
+        <td><strong>Flight Number</strong></td>
+        <td>{{ flight.flight_number }}</td>
+    </tr>
+    <tr>
+        <td><strong>Departure & Arrival Times</strong></td>
+        <td>Departs at: {{ flight.departure }} | Arrives at: {{ flight.arrival }}</td>
+    </tr>
+</table>
+
+
+{% endblock %}
